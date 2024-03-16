@@ -1,3 +1,4 @@
+#Этот калькулятор некрасивый. Красивый в файле task5
 import tkinter as tk
 
 def button_click(number):
