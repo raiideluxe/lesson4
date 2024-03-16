@@ -44,6 +44,12 @@ def button_equal():
     elif math == "*":
         result = f_num * second_number
     elif math == "/":
+        if second_number == 0:
+            popup = tk.Tk()
+            label = tk.Label(popup, text="Обшибка! На ноль делить нельзя!")
+            label.pack(side="top", fill="x", pady=10)
+            popup.mainloop()
+        return
         result = f_num / second_number
 
     display.insert(0, result)
@@ -63,26 +69,27 @@ buttons = [
     '4', '5', '6',
     '1', '2', '3',
     '0', '+', '-',
-    '*', '/', '=', 'C'
+    '*', '/', '=',
+    'C'
 ]
 
 row = 1
 col = 0
 for button in buttons:
     if button == '=':
-        tk.Button(root, text=button, command=button_equal).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_equal,width=10).grid(row=row, column=col)
     elif button == 'C':
-        tk.Button(root, text=button, command=button_clear).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_clear,width=10).grid(row=row, column=col)
     elif button == '/':
-        tk.Button(root, text=button, command=button_divide).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_divide,width=10).grid(row=row, column=col)
     elif button == '*':
-        tk.Button(root, text=button, command=button_multiply).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_multiply,width=10).grid(row=row, column=col)
     elif button == '+':
-        tk.Button(root, text=button, command=button_add).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_add,width=10).grid(row=row, column=col)
     elif button == '-':
-        tk.Button(root, text=button, command=button_subtract).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_subtract,width=10).grid(row=row, column=col)
     else:
-        tk.Button(root, text=button, command=lambda x=button: button_click(x)).grid(row=row, column=col)
+        tk.Button(root, text=button, command=lambda x=button: button_click(x),width=10).grid(row=row, column=col)
 
     col += 1
     if col > 2:
