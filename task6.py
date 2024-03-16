@@ -31,9 +31,9 @@ class PhotoViewerApp:
             self.current_image_index -= 1
             self.update_image()
 
-    def forward(self, increment):
+    def forward(self, step):
         if self.current_image_index < len(self.photo_images) - 1:
-            self.current_image_index += increment
+            self.current_image_index += step
             self.update_image()
 
     def update_image(self):
