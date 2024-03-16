@@ -12,15 +12,15 @@ class MainWindow(tk.Frame):
         self.years = tk.IntVar()
         self.amount = tk.StringVar()
 
-        principal_label = tk.Label(self, text="Principal:", underline=0, anchor=tk.W)
+        principal_label = tk.Label(self, text="Principal $:", underline=0, anchor=tk.W)
         principal_label.grid(row=0, column=0)
-        self.principal_scale = tk.Scale(self, from_=0, to=100, resolution=0.01, orient=tk.HORIZONTAL,
+        self.principal_scale = tk.Scale(self, from_=1000, to=10000, resolution=1, orient=tk.HORIZONTAL,
                                         variable=self.principal, command=self.updateUi)
         self.principal_scale.grid(row=0, column=1)
 
         rate_label = tk.Label(self, text="Rate:", underline=0, anchor=tk.W)
         rate_label.grid(row=1, column=0)
-        self.rate_scale = tk.Scale(self, from_=0, to=10, resolution=0.01, orient=tk.HORIZONTAL, variable=self.rate,
+        self.rate_scale = tk.Scale(self, from_=0, to=100, resolution=0.01, orient=tk.HORIZONTAL, variable=self.rate,
                                    command=self.updateUi)
         self.rate_scale.grid(row=1, column=1)
 
