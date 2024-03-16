@@ -1,5 +1,5 @@
 from tkinter import *
-
+from mainWindow import MainWindow
 
 def circle():
     c.create_oval(x, y, x + 30, y + 30)
@@ -25,9 +25,17 @@ x = 0
 y = 0
 
 root = Tk()
+root.title("integerst")
+
+file = "interest.ico"
+root.iconbitmap(file)
+
+
 c = Canvas(width=300, height=300, bg='white')
-c.pack()
+c.grid(row=0,column=0)
 c.bind("<Button-3>", popup)
+app = MainWindow(root)
+root.bind("<Escape>", app.quit)
 menu = Menu(tearoff=0)
 menu.add_command(label="Круг", command=circle)
 menu.add_command(label="Квадрат", command=square)
