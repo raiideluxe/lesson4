@@ -57,7 +57,6 @@ def button_equal():
 def button_clear():
     display.delete(0, tk.END)
 
-# Создание графического интерфейса
 root = tk.Tk()
 root.title("Простой калькулятор")
 
