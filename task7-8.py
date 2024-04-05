@@ -29,8 +29,8 @@ if __name__ == "__main__":
     mainmenu.add_cascade(label="Файл", menu=filemenu)
     mainmenu.add_cascade(label="Справка", menu=helpmenu)
 
-    file = "interest.ico"
-    root.iconbitmap(file)
+    appicon = "interest.ico"
+    root.iconbitmap(appicon)
 
     app = MainWindow(root)
 
