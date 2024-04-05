@@ -76,7 +76,7 @@ row = 1
 col = 0
 for button in buttons:
     if button == '=':
-        tk.Button(root, text=button, command=button_equal,width=10).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_equal,width=10).grid(row=row, column=col) #10
     elif button == 'C':
         tk.Button(root, text=button, command=button_clear,width=10).grid(row=row, column=col)
     elif button == '/':
