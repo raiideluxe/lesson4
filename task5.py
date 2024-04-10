@@ -76,19 +76,19 @@ row = 1
 col = 0
 for button in buttons:
     if button == '=':
-        tk.Button(root, text=button, command=button_equal,width=10).grid(row=row, column=col) #10
+        tk.Button(root, text=button, command=button_equal).grid(row=row, column=col)
     elif button == 'C':
-        tk.Button(root, text=button, command=button_clear,width=10).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_clear).grid(row=row, column=col)
     elif button == '/':
-        tk.Button(root, text=button, command=button_divide,width=10).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_divide).grid(row=row, column=col)
     elif button == '*':
-        tk.Button(root, text=button, command=button_multiply,width=10).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_multiply).grid(row=row, column=col)
     elif button == '+':
-        tk.Button(root, text=button, command=button_add,width=10).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_add).grid(row=row, column=col)
     elif button == '-':
-        tk.Button(root, text=button, command=button_subtract,width=10).grid(row=row, column=col)
+        tk.Button(root, text=button, command=button_subtract).grid(row=row, column=col)
     else:
-        tk.Button(root, text=button, command=lambda x=button: button_click(x),width=10).grid(row=row, column=col)
+        tk.Button(root, text=button, command=lambda x=button: button_click(x)).grid(row=row, column=col)
 
     col += 1
     if col > 2:
